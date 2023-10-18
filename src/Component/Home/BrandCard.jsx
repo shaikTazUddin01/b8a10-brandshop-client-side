@@ -1,4 +1,4 @@
-import { AiOutlineArrowRight } from 'react-icons/ai';
+// import { AiOutlineArrowRight } from 'react-icons/ai';
 
 const BrandCard = ({ brand }) => {
     return (
@@ -9,11 +9,11 @@ const BrandCard = ({ brand }) => {
                 </figure>
                 <div className="card-body items-center text-center">
                     <h2 className="card-title -mt-2">{brand?.category_name}</h2>
-                    <div className="card-actions">
+                    {/* <div className="card-actions">
                         <button className="py-2 px-3 bg-[#353535] rounded-md text-white flex justify-center items-center gap-2">Show Details
                         <AiOutlineArrowRight></AiOutlineArrowRight>
                         </button>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>
