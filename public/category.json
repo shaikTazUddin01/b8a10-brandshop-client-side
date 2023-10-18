@@ -1,0 +1,33 @@
+[
+    {
+      "id": 1,
+      "category_name": "Apple",
+      "image": "https://i.ibb.co/0MbGJ56/applelogo.webp"
+    },
+    {
+      "id": 2,
+      "category_name": "Samsung",
+      "image": "https://example.com/clothing.jpg"
+    },
+    {
+      "id": 3,
+      "category_name": "Google",
+      "image": "https://example.com/books.jpg"
+    },
+    {
+      "id": 4,
+      "category_name": "Sony",
+      "image": "https://example.com/home-garden.jpg"
+    },
+    {
+      "id": 5,
+      "category_name": "Intel",
+      "image": "https://example.com/sports-outdoors.jpg"
+    },
+    {
+      "id": 6,
+      "category_name": "One Plus",
+      "image": "https://example.com/toys-games.jpg"
+    }
+  ]
+  

@@ -1,0 +1,12 @@
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+    /* content: 'prev'; */
+    color: white !important;
+}
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+    /* content: 'next'; */
+    color: white;
+}
+
+span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: white;
+}
