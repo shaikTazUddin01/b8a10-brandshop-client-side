@@ -1,7 +1,37 @@
 import { Link } from 'react-router-dom';
 import bg from '../../assets/img/bg/login-bg.jpg'
 import { FcGoogle } from 'react-icons/fc'
+import { useContext } from 'react';
+import { AuthContext } from '../../Provider/AuthProvider';
+import { ToastContainer, toast } from 'react-toastify';
+
+
 const Login = () => {
+    const { handleLogin ,googleSignIn} = useContext(AuthContext)
+
+    const handleSignIn = (e) => {
+        e.preventDefault()
+        const form = e.target;
+        const email = form.email.value;
+        const password = form.password.value;
+
+        handleLogin(email, password)
+            .then((result) => {
+                const user = result.user
+                if (user) {
+                    toast.success("successFully Login")
+                }
+            }).catch((error) => {
+                const errorMessage = error.message;
+                toast.error(errorMessage)
+            })
+    }
+const handleGoogleSignIn=()=>{
+    googleSignIn()
+    .then(result=>console.log(result))
+    .catch(err=>console.error(err))
+
+}
     return (
         <div style={{ backgroundImage: `url(${bg})` }} className='bg-cover min-h-[80vh]'>
             <div className='mx-auto bg-[#0505059d] min-h-[80vh]' >
@@ -12,7 +42,7 @@ const Login = () => {
                                 <div className="text-center lg:text-left rounded-t-lg  py-5 bg-[#383838]">
                                     <h1 className="text-5xl font-bold text-center text-white">Sign In</h1>
                                 </div>
-                                <form className="card-body" >
+                                <form className="card-body" onSubmit={handleSignIn}>
                                     <div className="form-control">
                                         <label className="label">
                                             <span className="label-text font-bold">Email</span>
@@ -36,7 +66,7 @@ const Login = () => {
                                     <div className='h-[1px] w-[50px] bg-[#383838]'></div>
                                 </div>
                                 <div className='mb-3 mt-2'>
-                                    <div className='flex justify-center items-center border mx-9 rounded-lg py-2 gap-2'>
+                                    <div className='flex justify-center items-center border mx-9 rounded-lg py-2 gap-2 ' onClick={handleGoogleSignIn} >
                                         <FcGoogle className='text-2xl'></FcGoogle>
                                         <p className='font-bold'>Sign In With Google</p>
                                     </div>
@@ -46,6 +76,7 @@ const Login = () => {
                                     <p>Don't Have An Account.?</p>
                                     <Link to={'/signUp'} className='text-[#383838] font-bold'>Sign Up</Link>
                                 </div>
+                                <ToastContainer></ToastContainer>
                             </div>
                         </div>
                     </div>

@@ -6,7 +6,7 @@ const MyCart = () => {
     const myOrders=useLoaderData()
     const [orders,setOrder]=useState(myOrders)
     return (
-        <div className='bg-slate-100'>
+        <div className=''>
             <div className='min-h-screen max-w-7xl mx-auto '>
             <div className='grid grid-cols-2 gap-4 my-20'>
             {

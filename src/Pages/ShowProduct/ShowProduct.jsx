@@ -12,7 +12,7 @@ const ShowProduct = () => {
         <div className="min-h-[89vh]">
             {
                 brandItems.length>0 ?
-                    <div className="grid grid-cols-3 gap-4 my-20 max-w-7xl mx-auto">
+                    <div className="grid grid-cols-3 gap-6 my-20 max-w-6xl mx-auto">
                         {
                             brandItems?.map(item => <ProductCard key={item._id} item={item}></ProductCard>)
                         }

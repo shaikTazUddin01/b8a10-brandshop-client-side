@@ -23,7 +23,6 @@ const OrderProduct = ({ order, setOrder ,orders}) => {
                 })
                     .then(res => res.json())
                     .then(data => {
-
                         if (data.deletedCount) {
                             const remaining = orders.filter(order => order._id !== id);
                             setOrder(remaining);
@@ -40,25 +39,18 @@ const OrderProduct = ({ order, setOrder ,orders}) => {
 
             }
         })
-
-
-
-
-
-
-
-
-
-
     }
     return (
         <div>
-            <div className="card card-side bg-base-100 shadow-lg hover:shadow-xl 
+            <div className="card card-side shadow-lg hover:shadow-xl 
             shadow-[#383838] hover:shadow-[#383838]">
-                <figure><img src='https://i.ibb.co/z2L1s8V/download.png' alt="Movie" /></figure>
+                <figure className='border'><img src={imageUrl?imageUrl:""} className='h-[200px]' alt="Movie" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">{name}</h2>
-                    <p>Click the button to watch on Jetflix app.</p>
+                    <h2 className='text-[#4b4b4b] font-semibold -mt-2'>{brandName}</h2>
+                <p>{
+                    shortDescription.slice(0,50)
+                    }...</p>
                     <div className="card-actions justify-end">
                         <button className="bg-red-700 text-white rounded-md 
                         py-2 px-3

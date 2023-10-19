@@ -29,6 +29,7 @@ const AddProduct = () => {
             .then(data => {
                 if (data.acknowledged == true) {
                     toast.success("SuccessFully you add a product")
+                    form.reset()
                 }
             }
             )
@@ -55,7 +56,7 @@ const AddProduct = () => {
                                         <label className="label">
                                             <span className="label-text font-bold">Brand Name</span>
                                         </label>
-                                        <select name="brandName" className='input input-bordered'>
+                                        <select name="brandName" className='input input-bordered' required>
                                             <option value="">--Select a Brand--</option>
                                             <option value="apple">Apple</option>
                                             <option value="samsung">Samsung</option>
@@ -94,7 +95,7 @@ const AddProduct = () => {
                                         <label className="label">
                                             <span className="label-text font-bold">Short description</span>
                                         </label>
-                                        <textarea name="shortDescription" placeholder='Short description' cols="30" rows="10" className='input input-bordered pt-3'></textarea>
+                                        <textarea name="shortDescription" placeholder='Short description' cols="30" rows="10" className='input input-bordered pt-3' required></textarea>
 
                                     </div>
                                     <div className="form-control mt-2">
