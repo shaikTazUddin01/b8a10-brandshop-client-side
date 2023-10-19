@@ -7,6 +7,8 @@ const BrandCard = ({ brand }) => {
     //     const filter=loadProduct.filter(product=>product.name===brand.category_name);
     //     setProduct(filter);
     // },[])
+    const brandName = brand?.brand_name;
+    const brandNameUpperCase=brandName.toUpperCase();
     return (
         <div>
            <Link to={`/showProduct/${brand.brand_name}`}>
@@ -15,7 +17,7 @@ const BrandCard = ({ brand }) => {
                     <img src={brand?.image} alt="Shoes" className="rounded-t-xl h-[250px] w-full" />
                 </figure>
                 <div className="card-body items-center text-center">
-                    <h2 className="card-title -mt-2">{brand?.brand_name}</h2>
+                    <h2 className="-mt-2 card-title" >{brandNameUpperCase}</h2>
                  {/* <h1>{loadProduct.length}</h1> */}
                 </div>
             </div>

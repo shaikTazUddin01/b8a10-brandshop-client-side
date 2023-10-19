@@ -9,6 +9,7 @@ const AddProduct = () => {
         const form = e.target;
         const name = form.name.value;
         const brandName = form.brandName.value;
+        // const  = bName.toLowerCase();
         const typeOfProduct = form.typeOfProduct.value;
         const imageUrl = form.imageUrl.value;
         const price = form.price.value;
@@ -56,12 +57,12 @@ const AddProduct = () => {
                                         </label>
                                         <select name="brandName" className='input input-bordered'>
                                             <option value="">--Select a Brand--</option>
-                                            <option value="Apple">Apple</option>
-                                            <option value="Samsung">Samsung</option>
-                                            <option value="Google">Google</option>
-                                            <option value="Sony">Sony</option>
-                                            <option value="Intel">Intel</option>
-                                            <option value="onePlus">Walton</option>
+                                            <option value="apple">Apple</option>
+                                            <option value="samsung">Samsung</option>
+                                            <option value="google">Google</option>
+                                            <option value="sony">Sony</option>
+                                            <option value="intel">Intel</option>
+                                            <option value="walton">Walton</option>
                                         </select>
                                     </div>
                                     <div className="form-control">

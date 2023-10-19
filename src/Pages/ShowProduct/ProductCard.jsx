@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const ProductCard = ({ item }) => {
-    const {_id, name, brandName, typeOfProduct, price, rating } = item
+    const { _id, name, brandName, typeOfProduct, price, rating } = item
     return (
         <div>
             <div className="card bg-base-100 shadow-xl">
@@ -11,8 +11,8 @@ const ProductCard = ({ item }) => {
                 </figure>
                 <div className="card-body ">
                     <div className='flex justify-between'>
-                        <h2 className="card-title">{name}</h2>
-                        <h2 className="card-title">{brandName}</h2>
+                        <h2 className="card-title uppercase">{name}</h2>
+                        <h2 className="card-title uppercase">{brandName}</h2>
                     </div>
                     <h2 className="card-title">{typeOfProduct}</h2>
                     <div className='flex justify-between'>
@@ -21,9 +21,11 @@ const ProductCard = ({ item }) => {
                     </div>
                     <div className="card-actions flex justify-between">
                         <Link to={`/productDetails/${_id}`}>
-                        <button className="btn btn-primary">Show Details</button>
+                            <button className="btn btn-primary">Show Details</button>
                         </Link>
-                        <button className="btn btn-primary">update</button>
+                        <Link to={`/updateProduct/${_id}`}>
+                            <button className="btn btn-primary">Update</button>
+                        </Link>
                     </div>
                 </div>
             </div>
