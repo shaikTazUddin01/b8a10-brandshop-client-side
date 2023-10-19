@@ -1,9 +1,27 @@
 import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
 
 const ShowProductDetails = () => {
     const data = useLoaderData()
     const {name, brandName, typeOfProduct, imageUrl, price, rating, shortDescription }=data;
+    const handleOrder=()=>{
+        const product={name, brandName, typeOfProduct, imageUrl, price, rating, shortDescription }
+        fetch('http://localhost:5000/order',{
+            method:"POST",
+            headers:{
+                'content-type':'application/json'
+            },
+            body:JSON.stringify(product)
+        })
+        .then(res=>res.json())
+        .then(data=>{
+            if (data.acknowledged) {
+                toast.success("SuccessFully you added this order")
+            }
+        })
+    }
+
     return (
         <div className='my-20 max-w-6xl mx-auto'>
             <div className="card bg-base-100 shadow-xl">
@@ -15,10 +33,11 @@ const ShowProductDetails = () => {
                     </h2>
                     <p>{ShowProductDetails}</p>
                     <div className="card-actions justify-end">
-                        <Link>
-                        <button className='btn btn-success'>Add Cart</button>
-                        </Link>
+                       
+                        <button className='btn btn-success' onClick={handleOrder}>Add Cart</button>
+                        
                     </div>
+                    <ToastContainer></ToastContainer>
                 </div>
             </div>
         </div>
