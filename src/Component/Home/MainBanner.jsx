@@ -30,8 +30,8 @@ const MainBanner = () => {
             navigation
             pagination={{ clickable: true }}
             // scrollbar={{ draggable: true }}
-            onSwiper={(swiper) => console.log(swiper)}
-            onSlideChange={() => console.log('slide change')}
+            // onSwiper={(swiper) => }
+            // onSlideChange={() => }
         >
             <SwiperSlide className='bg-gradient-to-r from-[#353535] to-[#000000] max-w-full min-h-[550px] flex items-center justify-center'
             // style={{ backgroundImage: `url(${iphoneBg})` }}

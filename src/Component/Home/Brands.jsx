@@ -16,7 +16,7 @@ const Brands = () => {
                 <div className='w-[5%] h-[3px] bg-[#353535] mx-auto mt-1'></div>
                 <div className="grid grid-cols-3 gap-6 py-10">
                     {
-                        brands?.map(brand => <BrandCard brand={brand}></BrandCard>)
+                        brands?.map(brand => <BrandCard key={brand.id} brand={brand} ></BrandCard>)
                     }
                 </div>
             </div>
