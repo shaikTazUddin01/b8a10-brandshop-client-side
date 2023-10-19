@@ -25,7 +25,7 @@ const ShowProductDetails = () => {
     return (
         <div className='my-20 max-w-6xl mx-auto'>
             <div className="card bg-base-100 shadow-xl">
-                <figure><img src="https://i.ibb.co/mSYjxbc/minsk-belarus-april-samsung-logo-south-korean-multinational-electronics-company-minsk-belarus-april.webp" alt="Shoes" /></figure>
+                <figure><img src={imageUrl?imageUrl:""} alt="Shoes" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">
                        {name}

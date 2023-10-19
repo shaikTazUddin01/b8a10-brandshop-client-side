@@ -5,7 +5,7 @@ import MainBanner from '../../Component/Home/MainBanner';
 const Home = () => {
     
     return (
-        <div>
+        <div className=''>
            <MainBanner></MainBanner>
            <Brands ></Brands>
         </div>

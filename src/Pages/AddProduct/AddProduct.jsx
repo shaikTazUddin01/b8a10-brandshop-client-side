@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import bg from '../../assets/img/bg/login-bg.jpg'
+import bg from '../../assets/img/bg/d.jpg'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -36,10 +36,10 @@ const AddProduct = () => {
     }
     return (
         <div style={{ backgroundImage: `url(${bg})` }} className='bg-cover min-h-[100vh]'>
-            <div className='mx-auto bg-[#050505bb] min-h-[100vh]' >
+            <div className='mx-auto bg-[#0505057e] min-h-[100vh]' >
                 <div className="py-10">
                     <div className="hero-content flex-col w-full mx-auto">
-                        <div className="card flex-shrink-0 w-1/2 shadow-2xl bg-[#ffffff9d] ">
+                        <div className="card flex-shrink-0 w-1/2 shadow-2xl bg-[#ffffff8c] ">
                             <div className='rounded-2xl'>
                                 <div className="text-center lg:text-left rounded-t-lg  py-5 bg-[#383838]">
                                     <h1 className="text-5xl font-bold text-center text-white">Add Product</h1>
