@@ -18,7 +18,7 @@ const OrderProduct = ({ order, setOrder ,orders}) => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/order/${id}`, {
+                fetch(` https://brand-shop-server-pakuuj9ls-taz-uddins-projects.vercel.app/order/${id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())
