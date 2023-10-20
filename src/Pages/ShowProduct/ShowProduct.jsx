@@ -6,9 +6,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectFade } from 'swiper/modules';
 // Import Swiper styles
 import 'swiper/css';
-// import 'swiper/css/navigation';
-// import 'swiper/css/pagination';
-// import 'swiper/css/scrollbar';
 import 'swiper/css/effect-fade';
 import { useEffect, useState } from "react";
 
@@ -28,11 +25,20 @@ const ShowProduct = () => {
 
     useEffect(() => {
 
+        const fetchData = async () => {
+            const res = await fetch('/add.json');
+            const data = await res.json();
+            setAdItem(data);
+        }
+
+        fetchData()
+
         fetch('/add.json')
             .then(res => res.json())
             .then(data => setAdItem(data))
 
     }, [])
+    console.log(adItem)
 
     const ads = adItem.filter(item => item.brand == `${brandName}`);
 
@@ -46,7 +52,7 @@ const ShowProduct = () => {
             <div>
                 <Swiper
                     // install Swiper modules
-                    modules={[Navigation, Pagination, Scrollbar, A11y,Autoplay ,EffectFade]}
+                    modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectFade]}
                     spaceBetween={50}
                     slidesPerView={1}
                     effect={'fade'}
@@ -58,19 +64,19 @@ const ShowProduct = () => {
                         delay: 2500,
                         disableOnInteraction: false,
                     }}
-                    // onSwiper={(swiper) => console.log(swiper)}
-                    // onSlideChange={() => console.log('slide change')}
+                // onSwiper={(swiper) => console.log(swiper)}
+                // onSlideChange={() => console.log('slide change')}
                 >
                     {
-                        ads.map((ad, index) => (
+                        ads?.map((ad, index) => (
                             <SwiperSlide key={index} className='bg-gradient-to-b from-[#363636] to-[#000000] max-w-full min-h-[400px] flex items-center justify-center p-10'>
                                 <div className="flex flex-col md:flex-row justify-between items-center h-[600px] md:h-auto">
                                     <div className="w-full md:w-1/2 px-5 text-center">
                                         <h1 className="text-white  text-2xl font-semibold mb-2">{ad.title}</h1>
-                                        <button className="bg-[#454546] text-white px-3 py-2 rounded-md mt-2 border">Buy Now</button>
+                                        {/* <button className="bg-[#454546] text-white px-3 py-2 rounded-md mt-2 border">Buy Now</button> */}
                                     </div>
                                     <div className="w-full md:w-1/2 flex justify-center items-center">
-                                        <img src={ad.img} alt="" className="max-h-[300px]"/>
+                                        <img src={ad.img} alt="" className="max-h-[300px]" />
                                     </div>
                                 </div>
                             </SwiperSlide>

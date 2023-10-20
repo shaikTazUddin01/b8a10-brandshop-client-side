@@ -36,9 +36,9 @@ const UpdateProduct = () => {
     return (
         <div style={{ backgroundImage: `url(${bg})` }} className='bg-cover min-h-[100vh]'>
             <div className='mx-auto bg-[#05050577] min-h-[100vh]' >
-                <div className="md:py-10">
+                <div className="mx-2 md:py-10 px-2">
                     <div className="hero-content flex-col w-full mx-auto">
-                        <div className="card flex-shrink-0 md:w-1/2 shadow-2xl bg-[#ffffff86] ">
+                        <div className="card flex-shrink-0 w-[95%] md:w-1/2 shadow-2xl bg-[#ffffff86] ">
                             <div className='rounded-2xl'>
                                 <div className="text-center lg:text-left rounded-t-lg  py-5 bg-[#383838]">
                                     <h1 className="text-4xl md:text-5xl font-bold text-center text-white px-4 md:px-0">Update Product</h1>

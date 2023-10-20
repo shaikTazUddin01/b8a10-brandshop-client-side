@@ -5,7 +5,7 @@ import { ToastContainer, toast } from "react-toastify";
 
 
 const Navbar = () => {
-    const logo='/vite.svg'
+    const logo = '/vite.svg'
     const { user, handlesignOut } = useContext(AuthContext)
     const [open, setopen] = useState(false)
     const handleLogOut = () => {
@@ -63,7 +63,7 @@ const Navbar = () => {
 
     return (
         <div>
-            <div className="bg-gradient-to-t from-[#383838] to-[#636262] text-white">
+            <div className="bg-gradient-to-t from-[#383838] to-[#636262] text-white flex items-center justify-center">
                 <div className="navbar mx-auto max-w-7xl">
                     <div className="navbar-start">
                         <div className="dropdown">
@@ -74,14 +74,16 @@ const Navbar = () => {
                                 {navItem}
                             </ul>
                         </div>
-                        <Link to={'/'} className="">
-                            <div className="flex justify-center items-center gap-2">
-                            <img src={logo} alt="" />
-                            <p className="font-semibold">
-                            ThunderShop
-                            </p>
-                            </div>
-                        </Link>
+                        <div className="hidden lg:flex">
+                            <Link to={'/'} className="">
+                                <div className="flex justify-center items-center gap-2">
+                                    <img src={logo} alt="" />
+                                    <p className="font-semibold">
+                                        ThunderShop
+                                    </p>
+                                </div>
+                            </Link>
+                        </div>
                     </div>
                     <div className="navbar-end hidden lg:flex">
                         <ul className="menu menu-horizontal px-1">
@@ -89,9 +91,18 @@ const Navbar = () => {
                         </ul>
                     </div>
                 </div>
-                {/* <div className="navbar-end">
-                    <a className="btn">Button</a>
-                </div> */}
+                <div className="">
+                <div className="navbar-end lg:hidden flex justify-end w-full pr-10">
+                            <Link to={'/'} className="">
+                                <div className="flex justify-center items-center gap-2">
+                                    <img src={logo} alt="" />
+                                    <p className="font-semibold">
+                                        ThunderShop
+                                    </p>
+                                </div>
+                            </Link>
+                        </div>
+                </div>
                 <ToastContainer></ToastContainer>
             </div>
         </div>

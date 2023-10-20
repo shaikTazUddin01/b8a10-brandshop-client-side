@@ -14,7 +14,7 @@ const BrandCard = ({ brand }) => {
            <Link to={`/showProduct/${brand.brand_name}`}>
            <div className="card bg-base-100 shadow-lg shadow-[#353535] hover:shadow-xl hover:shadow-[#353535]">
                 <figure className="">
-                    <img src={brand?.image} alt="Shoes" className="rounded-t-xl h-[250px] w-full" />
+                    <img src={brand?.image} alt="Shoes" className="rounded-t-xl h-[200px] md:h-[270px] w-full" />
                 </figure>
                 <div className="card-body items-center text-center">
                     <h2 className="-mt-2 card-title" >{brandNameUpperCase}</h2>

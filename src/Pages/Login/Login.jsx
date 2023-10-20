@@ -4,10 +4,7 @@ import { FcGoogle } from 'react-icons/fc'
 import { useContext } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
 import { ToastContainer, toast } from 'react-toastify';
-// import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
-// import auth from '../../fireBase/fireBase.config';
 
-// const googleProvider=new GoogleAuthProvider()
 
 const Login = () => {
     const { handleLogin,signInGoogle} = useContext(AuthContext)
@@ -27,8 +24,7 @@ const Login = () => {
                     navigate(location?.state ? location.state : '/')
                 }
             }).catch((error) => {
-                // const errorMessage = error.message;
-                toast.error("Your Email or password is wrong")
+                toast.error("Your Email or password doesn't match")
             })
     }
 
@@ -37,21 +33,12 @@ const Login = () => {
         .then((result)=>{
             if(result.user){
                 toast.success("SuccessFully SignIn")
+                navigate(location?.state ? location.state : '/')
             }
         }).catch((err)=>{
             toast.error("something is wrong please try again")
         })
     }
-    // const handleGitHub=()=>{
-    //     signinGit()
-    //     .then((result)=>{
-    //         if(result.user){
-    //             toast.success("SuccessFully SignIn")
-    //         }
-    //     }).catch((err)=>{
-    //         toast.error("something is wrong please try again")
-    //     })
-    // }
     return (
         <div style={{ backgroundImage: `url(${bg})` }} className='bg-cover min-h-[80vh]'>
             <div className='mx-auto bg-[#0505059d] min-h-[80vh]' >
@@ -91,16 +78,6 @@ const Login = () => {
                                         <p className='font-bold'>Sign In With Google</p>
                                     </div>
                                 </div>
-{/*                                 
-                                <div className='mb-3 mt-2' onClick={handleGitHub} >
-                                    <div className='flex justify-center items-center border mx-9 rounded-lg py-2 gap-2 ' >
-                                        <p className='font-bold'>Sign In With GitHub</p>
-                                    </div>
-                                </div> */}
-
-                                {/* <div onClick={handleGitHub}>
-                                    <p>GitHub</p>
-                                </div> */}
                                 <div className='flex justify-center mb-5 gap-2'>
                                     <p>Don't Have An Account.?</p>
                                     <Link to={'/signUp'} className='text-[#383838] font-bold'>Sign Up</Link>

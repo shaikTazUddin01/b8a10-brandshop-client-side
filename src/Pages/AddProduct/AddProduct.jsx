@@ -40,10 +40,10 @@ const AddProduct = () => {
             <div className='mx-auto bg-[#0505057e] min-h-[100vh] ' >
                 <div className="py-10 ">
                     <div className="hero-content flex-col w-full mx-auto">
-                        <div className="card flex-shrink-0 md:w-1/2 shadow-2xl bg-[#ffffff8c] ">
+                        <div className="card flex-shrink-0 w-[95%] md:w-1/2 shadow-2xl bg-[#ffffff8c] ">
                             <div className='rounded-2xl'>
                                 <div className="text-center lg:text-left rounded-t-lg  py-5 bg-[#383838]">
-                                    <h1 className="text-5xl font-bold text-center text-white">Add Product</h1>
+                                    <h1 className="text-3xl md:text-5xl font-bold text-center text-white">Add Product</h1>
                                 </div>
                                 <form className="card-body" onSubmit={handleDataSubmit}>
                                     <div className="form-control">

@@ -10,7 +10,7 @@ const Brands = () => {
             .then(data => setBrand(data))
     }, [])
     return (
-        <div className='my-20 max-w-6xl mx-auto'>
+        <div className='my-20 max-w-7xl mx-auto'>
             <div className='text-center'>
                 <h1 className='text-4xl font-bold '>Brands</h1>
                 <div className='w-[5%] h-[3px] bg-[#353535] mx-auto mt-1'></div>
