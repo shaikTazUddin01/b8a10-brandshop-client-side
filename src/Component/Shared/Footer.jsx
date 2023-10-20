@@ -5,7 +5,7 @@ const Footer = () => {
         <Link to={'/'}>Home</Link>
         <Link to={'/myCart'}>My Cart</Link>
         <Link to={'/addProduct'}>Add Product</Link>
-        <Link to={'/login'}>Login</Link>
+       
     </>
     return (
         <div>
@@ -19,7 +19,7 @@ const Footer = () => {
                     <a className="link link-hover">Branding</a>
                     <a className="link link-hover">Design</a>
                     <a className="link link-hover">Marketing</a>
-                    <a className="link link-hover">Advertisement</a>
+                    {/* <a className="link link-hover">Advertisement</a> */}
                 </nav>
                 <nav>
                     <header className="footer-title">Company</header>

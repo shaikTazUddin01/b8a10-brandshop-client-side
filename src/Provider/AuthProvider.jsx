@@ -4,31 +4,32 @@ import auth from '../fireBase/fireBase.config';
 
 export const AuthContext = createContext(null)
 
-const googleAuthProvider=new GoogleAuthProvider()
+// const googleAuthProvider=new GoogleAuthProvider();
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState();
-    // const [loader,setLoader]=useState(true)
+    const [loader,setLoader]=useState(true)
 
     const handleRegister = (email, pass) => {
-        // setLoader(true)
+        setLoader(true)
         return createUserWithEmailAndPassword(auth, email, pass)
     }
     const handleLogin = (email, password) => {
-        // setLoader(true)
+        setLoader(true)
         return signInWithEmailAndPassword(auth, email, password)
     }
 
-const googleSignIn=()=>{
-    return signInWithPopup(auth,googleAuthProvider)
-}
-
+    const handleGoogleSignIn=()=>{
+        setLoader(true)
+        const provider=new GoogleAuthProvider();
+        return signInWithPopup(auth,provider)
+      }
 const handlesignOut=()=>{
     return signOut(auth)
 }
     useEffect(() => {
         const unSubscribe = onAuthStateChanged(auth, currentUser => {
             setUser(currentUser)
-            //    setLoader(false)
+               setLoader(false)
         })
         return () => {
             unSubscribe();
@@ -39,10 +40,10 @@ const handlesignOut=()=>{
     const AuthInFo = {
         handleRegister,
         handleLogin,
-        googleSignIn,
+        handleGoogleSignIn,
         user,
-        handlesignOut
-        // loader
+        handlesignOut,
+        loader
     }
     // console.log(user)
     return (

@@ -1,0 +1,130 @@
+[
+    {
+      "id": 1,
+      "img": "https://i.ibb.co/tprzxMx/2007-i211-018-laptop-smartphone-mockups-realistic-removebg-preview.png",
+      "title": "Apple MacBook Air 13.3-Inch Retina Display 8-core Apple M1 chip with 8GB RAM, 256GB SSD (MGN63) Space Gray",
+      "brand": "apple",
+      "details":""
+    },
+    {
+      "id": 2,
+      "img": "https://i.ibb.co/VCrCgnf/hero-iphone-pro-max-bsan8nevcgty-large-removebg-preview.png",
+      "title": "Apple iPhone 15 Pro Max | With Apple International Warranty Claim Support | 8GB/256GB , 8GB/512Gb ",
+      "brand": "apple",
+      "details":""
+    },
+    {
+      "id": 3,
+      "img": "https://i.ibb.co/sPjZ15g/macbook-air-d2234mv3oe0y-large-removebg-preview.png",
+      "title": "MacBook Air with M1 is an incredibly portable laptop — it’s nimble and quick, with a silent, fanless design and a beautiful Retina display. ",
+      "brand": "apple",
+      "details":""
+    },
+    {
+      "id": 4,
+      "img": "https://i.ibb.co/Rb4gSnR/giant-144774-removebg-preview.png",
+      "title": "Samsung 43 inc Crystal UHD 4K Smart TV | 43AU8000 | Series 8 || 1093 x 677 x 129 mm || LED Panel: 2 years, Spare Parts: 1 Year, Free Service: 5 Years",
+      "brand": "samsung",
+      "details":""
+    },
+    {
+      "id": 5,
+      "img": "https://i.ibb.co/n8ZNhHS/Samsung-Galaxy-Z-Flip5-removebg-preview.png",
+      "title": "Samsung Galaxy Z Flip5. Samsung Galaxy Z Flip5 internal storage base variant of 8 GB Ram, 256 GB, 512 GB Internal Memory (ROM).",
+      "brand": "samsung",
+      "details":""
+    },
+    {
+      "id": 6,
+      "img": "https://i.ibb.co/hRDXPSB/Samsung-Galaxy-Watch5-Graphite-removebg-preview.png",
+      "title": " Samsung Galaxy Watch5 internal storage base variant of 1.5 GB Ram, 16 GB Internal Memory (ROM). Samsung Galaxy Watch5 which is available in Graphite",
+      "brand": "samsung",
+      "details":""
+    },
+    {
+      "id": 7,
+      "img": "https://i.ibb.co/y6r59DH/Google-Pixel-Fold-removebg-preview.png",
+      "title": "Google Pixel Fold internal storage base variant of 12 GB Ram, 256 GB, 512 GB Internal Memory (ROM). Google Pixel Fold which is available in Porcelain, Obsidian colour.",
+      "brand": "google",
+      "details":""
+    },
+    {
+      "id": 8,
+      "img": "https://i.ibb.co/Zgw1b0w/Google-Pixel-5a-5-G-removebg-preview.png",
+      "title": "Google Pixel 5a 5G internal storage base variant of 6 GB Ram, 128 GB Internal Memory (ROM). Google Pixel 5a 5G which is available in Mostly Black colour.",
+      "brand": "google",
+      "details":""
+    },
+    {
+      "id": 9,
+      "img": "https://i.ibb.co/fFMp8V5/Google-Pixel-7-Pro-removebg-preview.png",
+      "title": "Google Pixel 7 Pro internal storage base variant of 12 GB Ram, 256 GB, 512 GB Internal Memory (ROM). Google Pixel 7 Pro which is available in Obsidian, Snow, Hazel colour.",
+      "brand": "google",
+      "details":""
+    },
+    {
+      "id": 10,
+      "img": "https://i.ibb.co/D5vcZz9/Sony-Xperia-Pro-I-300x300-removebg-preview.png",
+      "title": "Now Sony Xperia Pro-I. It has 12 GB RAM / 512 GB internal storage base variant of Sony Xperia Pro-I which is available in Frosted Black color.",
+      "brand": "sony",
+      "details":""
+    },
+    {
+      "id": 11,
+      "img": "https://i.ibb.co/rMkn7HR/Sony-Xperia-5-III-300x300-removebg-preview.png",
+      "title": "Sony Xperia 5 III || GSM / HSPA / LTE / 5G Network 2G GSM 850 / 900 1800 / 1900 - SIM 1 & SIM 2 Network 3G HSDPA 800 / 850 / 900 / 1700(AWS) / 1900 / 2100",
+      "brand": "sony",
+      "details":""
+    },
+    {
+      "id": 12,
+      "img": "https://i.ibb.co/9nSSWWw/12jy-FAs7lhap5o8-Qr-MCr-Zu7-Cbo-QG7-Zl-C5-O6-FBd-CD-removebg-preview.png",
+      "title": "KD-75X85K | 4K Ultra HD | High Dynamic Range (HDR) | Smart TV (Google TV",
+      "brand": "sony",
+      "details":""
+    },
+    {
+      "id": 13,
+      "img": "https://i.ibb.co/3r9Pkkb/12th-gen-intel-core-i9-12900ks-01-removebg-preview.png",
+      "title": "The Core i7-10700K 3.8 GHz Eight-Core LGA 1200 Processor from Intel has a base clock speed of 3.8 GHz and comes with features .",
+      "brand": "intel",
+      "details":""
+    },
+    {
+      "id": 14,
+      "img": "https://i.ibb.co/zxwnh62/intel-core-i7-13700-16-core-24-thread-11th-gen-processor-removebg-preview.png",
+      "title": "The Intel Core i7-13700 is a powerful 16-core, 24-thread 13th-generation processor. It is built on Intel's advanced 10nm process technology .",
+      "brand": "intel",
+      "details":""
+    },
+    {
+      "id": 15,
+      "img": "https://i.ibb.co/HVS7Hzm/Intel-11th-Gen-Core-i9-11900-K-removebg-preview.png",
+      "title": "This Intel Core I9-11900k Processor comes with Intel Iris Xe Graphics 32 graphics. This new 11th gen Rocket Lake microarchitecture .",
+      "brand": "intel",
+      "details":""
+    },
+    {
+      "id": 16,
+      "img": "https://i.ibb.co/kghq0Lr/walton-w32d130-led-basic-hd-tv-01-removebg-preview-1.png",
+      "title": "W32D120E11G || Product Type: Android TV || SECAM ||Receiving Range: 50MHz-862MHz ||No of Channel (ATV): 99 || Android Version:11.0 ",
+      "brand": "walton",
+      "details":""
+    },
+    {
+      "id": 17,
+      "img": "https://i.ibb.co/NtS6Nk3/Walton-Xanon-X20-Black-removebg-preview.png",
+      "title": "Walton Xanon X20 price starts from BDT. 18,999. Walton Xanon X20 internal storage base variant of 8 GB Ram, 128 GB Internal Memory (ROM).",
+      "brand": "walton",
+      "details":""
+    },
+    {
+      "id": 18,
+      "img": "https://i.ibb.co/X4ZS76N/Walton-Tick-WSWA-1-B-removebg-preview.png",
+      "title": "Walton Tick R1A price starts from BDT. 4,875. Walton Tick R1A internal storage base variant of 192 KB Ram, 128 MB Internal Memory (ROM).",
+      "brand": "walton",
+      "details":""
+    }
+    
+     
+    ]  

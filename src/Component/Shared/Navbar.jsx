@@ -21,7 +21,7 @@ const Navbar = () => {
         <li><NavLink to={'/addProduct'}>Add Product</NavLink></li>
         {
             user ?
-                <>
+                <div className="pl-2">
                     <div className='flex flex-col lg:justify-center lg:items-center px-5 lg:px-0'>
                         <abbr title="Click here to see profile">
                             <img src={user?.photoURL ? user.photoURL : ""} alt="img" className='w-10 h-10 border rounded-full'
@@ -32,7 +32,7 @@ const Navbar = () => {
                             open === true ?
                                 <div className='lg:mt-40 text-white border border-[#FFFFF]
                                  bg-[#2b2b2b] p-4 mt-10 
-                             rounded-md z-20 ml-8 lg:ml-0 lg:mr-48  absolute
+                             rounded-md z-20 ml-8 lg:ml-0 lg:mr-40 absolute
                             text-center shadow-lg shadow-[#FF325E]'>
                                     <h1 className='' >{user?.displayName && user.displayName}</h1>
                                     <h1 className='lowercase' >{user?.email && user.email}</h1>
@@ -48,7 +48,7 @@ const Navbar = () => {
                                 </div>
                         }
                     </div>
-                </>
+                </div>
                 :
                 <>
                     <li><NavLink to={'/login'}>Sign In</NavLink></li>
@@ -72,7 +72,11 @@ const Navbar = () => {
                                 {navItem}
                             </ul>
                         </div>
-                        <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+                        <Link to={'/'}>
+                            <p>
+                                Thandar
+                            </p>
+                        </Link>
                     </div>
                     <div className="navbar-end hidden lg:flex">
                         <ul className="menu menu-horizontal px-1">

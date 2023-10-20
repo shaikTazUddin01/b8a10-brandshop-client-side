@@ -18,6 +18,14 @@ const SignUp = () => {
         const password = form.password.value;
 
         console.log(name, email, photoUrl, password)
+        const passUpperCase = /[A-Z]/;
+        const passSpecial = /[!@#\$%\^&\*_]/;
+        // const pass6Char=/^.{7,}$/;
+
+        // if (pass6Char) {
+        if (passUpperCase.test(password)) {
+            if (passSpecial.test(password)) {
+
         handleRegister(email, password)
             .then((result) => {
                 const user = result.user
@@ -27,6 +35,7 @@ const SignUp = () => {
 
                     if (user) {
                         toast.success("SuccessFully you SignUp")
+                        form.reset()
                     }
                 }).catch((error) => {
                     const errorCode = error.code;
@@ -40,6 +49,14 @@ const SignUp = () => {
                 const errorMessage = error.message;
                 toast.error(errorMessage)
             });
+            
+        } else {
+            toast.error('Your password must contain at least special char from -[ ! @ # $ % ^ & * _ ]')
+
+        }
+    } else {
+        toast.error('Your password must contain at least one upper case letter.')
+    }
     }
 
     return (

@@ -1,14 +1,18 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import bg from '../../assets/img/bg/login-bg.jpg'
 import { FcGoogle } from 'react-icons/fc'
 import { useContext } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
 import { ToastContainer, toast } from 'react-toastify';
+// import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+// import auth from '../../fireBase/fireBase.config';
 
+// const googleProvider=new GoogleAuthProvider()
 
 const Login = () => {
-    const { handleLogin ,googleSignIn} = useContext(AuthContext)
-
+    const { handleLogin, handleGoogleSignIn } = useContext(AuthContext)
+    const location = useLocation()
+    const navigate = useNavigate()
     const handleSignIn = (e) => {
         e.preventDefault()
         const form = e.target;
@@ -20,18 +24,22 @@ const Login = () => {
                 const user = result.user
                 if (user) {
                     toast.success("successFully Login")
+                    navigate(location?.state ? location.state : '/')
                 }
             }).catch((error) => {
-                const errorMessage = error.message;
-                toast.error(errorMessage)
+                // const errorMessage = error.message;
+                toast.error("Your Email or password is wrong")
             })
     }
-const handleGoogleSignIn=()=>{
-    googleSignIn()
-    .then(result=>console.log(result))
-    .catch(err=>console.error(err))
+    const GoogleSignIn = () => {
+        handleGoogleSignIn()
+            .then(result => console.log(result))
+            .catch(err => console.error(err))
+       
 
-}
+        // console.log("HEllo")
+
+    }
     return (
         <div style={{ backgroundImage: `url(${bg})` }} className='bg-cover min-h-[80vh]'>
             <div className='mx-auto bg-[#0505059d] min-h-[80vh]' >
@@ -65,8 +73,8 @@ const handleGoogleSignIn=()=>{
                                     <div>or</div>
                                     <div className='h-[1px] w-[50px] bg-[#383838]'></div>
                                 </div>
-                                <div className='mb-3 mt-2'>
-                                    <div className='flex justify-center items-center border mx-9 rounded-lg py-2 gap-2 ' onClick={handleGoogleSignIn} >
+                                <div className='mb-3 mt-2' onClick={GoogleSignIn} >
+                                    <div className='flex justify-center items-center border mx-9 rounded-lg py-2 gap-2 ' >
                                         <FcGoogle className='text-2xl'></FcGoogle>
                                         <p className='font-bold'>Sign In With Google</p>
                                     </div>
