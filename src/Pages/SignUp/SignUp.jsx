@@ -64,7 +64,7 @@ const SignUp = () => {
             <div className='mx-auto bg-[#05050596] min-h-[100vh]' >
                 <div className=" py-10">
                     <div className="hero-content flex-col mx-auto ">
-                        <div className="card flex-shrink-0 w-2/5 shadow-2xl bg-[#ffffffa8] ">
+                        <div className="card flex-shrink-0 md:w-2/4 lg:w-2/5 shadow-2xl bg-[#ffffffa8] ">
                             <div className='rounded-2xl'>
                                 <div className="text-center lg:text-left rounded-t-lg  py-5 bg-[#383838]">
                                     <h1 className="text-5xl font-bold text-center text-white">Sign Up</h1>

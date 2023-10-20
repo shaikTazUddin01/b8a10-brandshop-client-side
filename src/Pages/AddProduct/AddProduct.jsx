@@ -37,10 +37,10 @@ const AddProduct = () => {
     }
     return (
         <div style={{ backgroundImage: `url(${bg})` }} className='bg-cover min-h-[100vh]'>
-            <div className='mx-auto bg-[#0505057e] min-h-[100vh]' >
-                <div className="py-10">
+            <div className='mx-auto bg-[#0505057e] min-h-[100vh] ' >
+                <div className="py-10 ">
                     <div className="hero-content flex-col w-full mx-auto">
-                        <div className="card flex-shrink-0 w-1/2 shadow-2xl bg-[#ffffff8c] ">
+                        <div className="card flex-shrink-0 md:w-1/2 shadow-2xl bg-[#ffffff8c] ">
                             <div className='rounded-2xl'>
                                 <div className="text-center lg:text-left rounded-t-lg  py-5 bg-[#383838]">
                                     <h1 className="text-5xl font-bold text-center text-white">Add Product</h1>
@@ -95,11 +95,11 @@ const AddProduct = () => {
                                         <label className="label">
                                             <span className="label-text font-bold">Short description</span>
                                         </label>
-                                        <textarea name="shortDescription" placeholder='Short description' cols="30" rows="10" className='input input-bordered pt-3' required></textarea>
+                                        <textarea name="shortDescription" placeholder='Short description' cols="30" rows="10" className='input input-bordered pt-3 h-20' required></textarea>
 
                                     </div>
                                     <div className="form-control mt-2">
-                                        <button className="text-white py-3 rounded-lg text-lg font-bold bg-[#383838]" type='submit'>Submit</button>
+                                        <button className="text-white py-3 rounded-lg text-lg font-bold bg-[#383838]" type='submit'>Add Product</button>
                                     </div>
                                     <ToastContainer></ToastContainer>
                                 </form>

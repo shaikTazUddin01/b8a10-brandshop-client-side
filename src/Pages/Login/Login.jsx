@@ -33,11 +33,19 @@ const Login = () => {
     }
     const GoogleSignIn = () => {
         handleGoogleSignIn()
-            .then(result => console.log(result))
-            .catch(err => console.error(err))
+            .then(result => {
+                const user=result.user
+                if (user) {
+                    toast.success("successFully LogIn")
+                }
+            })
+            .catch(err => {
+                console.log(err)
+                toast.error("something is wrong please try again")
+            })
        
 
-        // console.log("HEllo")
+        
 
     }
     return (
@@ -78,7 +86,6 @@ const Login = () => {
                                         <FcGoogle className='text-2xl'></FcGoogle>
                                         <p className='font-bold'>Sign In With Google</p>
                                     </div>
-
                                 </div>
                                 <div className='flex justify-center mb-5 gap-2'>
                                     <p>Don't Have An Account.?</p>

@@ -15,9 +15,9 @@ const UpdateProduct = () => {
         const imageUrl = form.imageUrl.value;
         const price = form.price.value;
         const rating = form.rating.value;
-        const shortDescription = form.shortDescription.value;
+        // const shortDescription = form.shortDescription.value;
 
-        const updateProduct = { name, brandName, typeOfProduct, imageUrl, price, rating, shortDescription }
+        const updateProduct = { name, brandName, typeOfProduct, imageUrl, price, rating }
         fetch(`http://localhost:5000/products/${_id}`, {
             method: "PUT",
             headers: {
@@ -26,23 +26,22 @@ const UpdateProduct = () => {
             body: JSON.stringify(updateProduct)
         })
             .then(res => res.json())
-            .then(data =>
-                {
-                    if(data.modifiedCount>0){
-                        toast.success("successFully updated")
-                    }
+            .then(data => {
+                if (data.modifiedCount > 0) {
+                    toast.success("successFully updated")
                 }
-                )
+            }
+            )
     }
     return (
         <div style={{ backgroundImage: `url(${bg})` }} className='bg-cover min-h-[100vh]'>
             <div className='mx-auto bg-[#05050577] min-h-[100vh]' >
-                <div className="py-10">
+                <div className="md:py-10">
                     <div className="hero-content flex-col w-full mx-auto">
-                        <div className="card flex-shrink-0 w-1/2 shadow-2xl bg-[#ffffff86] ">
+                        <div className="card flex-shrink-0 md:w-1/2 shadow-2xl bg-[#ffffff86] ">
                             <div className='rounded-2xl'>
                                 <div className="text-center lg:text-left rounded-t-lg  py-5 bg-[#383838]">
-                                    <h1 className="text-5xl font-bold text-center text-white">Update Product</h1>
+                                    <h1 className="text-4xl md:text-5xl font-bold text-center text-white px-4 md:px-0">Update Product</h1>
                                 </div>
                                 <form className="card-body" onSubmit={handleProductUpdate}>
                                     <div className="form-control">
@@ -90,13 +89,13 @@ const UpdateProduct = () => {
                                         <input type="Rating" placeholder="Rating" defaultValue={rating} className="input input-bordered " name='rating' required />
 
                                     </div>
-                                    <div className="form-control">
+                                    {/* <div className="form-control">
                                         <label className="label">
                                             <span className="label-text font-bold">Short description</span>
                                         </label>
                                         <textarea name="shortDescription" placeholder='Short description' defaultValue={shortDescription} cols="30" rows="10" className='input input-bordered pt-3'></textarea>
 
-                                    </div>
+                                    </div> */}
                                     <div className="form-control mt-2">
                                         <button className="text-white py-3 rounded-lg text-lg font-bold bg-[#383838]" type='submit'>Update</button>
                                     </div>

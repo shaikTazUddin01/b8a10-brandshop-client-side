@@ -3,7 +3,7 @@ import React, { createContext, useEffect, useState } from 'react';
 import auth from '../fireBase/fireBase.config';
 
 export const AuthContext = createContext(null)
-
+const provider=new GoogleAuthProvider();
 // const googleAuthProvider=new GoogleAuthProvider();
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState();
@@ -20,7 +20,6 @@ const AuthProvider = ({ children }) => {
 
     const handleGoogleSignIn=()=>{
         setLoader(true)
-        const provider=new GoogleAuthProvider();
         return signInWithPopup(auth,provider)
       }
 const handlesignOut=()=>{

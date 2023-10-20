@@ -8,11 +8,11 @@ const Commited = () => {
         <div className='max-w-7xl mx-auto'>
         <h1 className='text-4xl font-bold pb-2 text-center' >We are committed</h1>
         <div className='w-full mx-auto flex justify-center mt-2'>
-            <div className='h-1 w-[15%] bg-slate-800' mx-auto></div>
+            <div className='h-[3px] w-[15%] bg-slate-800' mx-auto></div>
         </div>
 
         {/* card area */}
-        <div className='grid grid-cols-3 gap-5 mt-10'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10 p-5 lg:p-0'>
             <div>
                 <div className="card bg-base-100 shadow-lg shadow-[#383838] hover:shadow-[#383838] text-center hover:shadow-xl">
                     <div className="card-body text-center">

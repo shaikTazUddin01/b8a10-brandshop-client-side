@@ -11,7 +11,7 @@ const ProductCard = ({ item }) => {
                     <img src={imageUrl ? imageUrl : ""} alt={name} className="rounded-xl" />
                 </figure>
                 <div className="card-body ">
-                    <div className='flex justify-between '>
+                    <div className='flex justify-between items-center'>
                         <h2 className="card-title  text-[#1f1f1f]">{name}</h2>
                         <h2 className="card-title uppercase text-[#555554]">{brandName}</h2>
                     </div>
@@ -59,7 +59,7 @@ const ProductCard = ({ item }) => {
                             />
                         </h5>
                     </div>
-                    <div className="card-actions flex justify-between">
+                    <div className="card-actions flex flex-col md:flex-row justify-between items-center">
                         <Link to={`/productDetails/${_id}`}>
                             <button className="bg-[#173a68] text-white 
                             py-2 px-3 rounded-md">Show Details</button>

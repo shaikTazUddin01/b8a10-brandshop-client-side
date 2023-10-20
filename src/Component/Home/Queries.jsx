@@ -2,16 +2,16 @@ import React from 'react';
 
 const Queries = () => {
     return (
-        <div className='my-20 max-w-7xl mx-auto'>
+        <div className='my-20 max-w-7xl mx-auto p-5 lg:p-0'>
             <div className='text-center'>
                 <p className='text-2xl font-bold'>Have any queries?</p>
                 <h1 className='text-4xl font-bold mt-2'>We're here to help.</h1>
                 <div className='w-full mx-auto flex justify-center mt-2'>
-                    <div className='h-1 w-[15%] bg-slate-800' mx-auto></div>
+                    <div className='h-[3px] md:w-[15%] w-[25%] bg-slate-800' mx-auto></div>
                 </div>
             </div>
             {/* card area */}
-            <div className='grid grid-cols-4 gap-5 mt-10'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-10'>
                 <div>
                     <div className="card bg-base-100 shadow-lg shadow-[#383838] hover:shadow-[#383838] text-center hover:shadow-xl">
                         <div className="card-body text-center">

@@ -8,7 +8,7 @@ const MyCart = () => {
     return (
         <div className=''>
             <div className='min-h-screen max-w-7xl mx-auto '>
-            <div className='grid grid-cols-2 gap-4 my-20'>
+            <div className='grid grid-cols-1 lg:grid-cols-2 gap-4 my-20 px-5 lg:px-0'>
             {
                 orders?.map(order=><OrderProduct key={order?._id} order={order} setOrder={setOrder} orders={orders}></OrderProduct>)
             }

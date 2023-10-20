@@ -43,7 +43,7 @@ const OrderProduct = ({ order, setOrder ,orders}) => {
     return (
         <div>
             <div className="card card-side shadow-lg hover:shadow-xl 
-            shadow-[#383838] hover:shadow-[#383838]">
+            shadow-[#383838] hover:shadow-[#383838] flex flex-col md:flex-row">
                 <figure className='border'><img src={imageUrl?imageUrl:""} className='h-[200px]' alt="Movie" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">{name}</h2>
@@ -51,7 +51,7 @@ const OrderProduct = ({ order, setOrder ,orders}) => {
                 <p>{
                     shortDescription.slice(0,50)
                     }...</p>
-                    <div className="card-actions justify-end">
+                    <div className="card-actions justify-end mx-auto md:mx-0">
                         <button className="bg-red-700 text-white rounded-md 
                         py-2 px-3
                         " onClick={() => handleDelete(_id)}>Delete</button>
