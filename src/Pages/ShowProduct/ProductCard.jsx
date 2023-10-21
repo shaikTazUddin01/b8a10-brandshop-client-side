@@ -6,7 +6,7 @@ const ProductCard = ({ item }) => {
     const { _id, name, brandName, typeOfProduct, price, rating, imageUrl } = item
     return (
         <div>
-            <div className="card bg-base-100 shadow-xl min-h-[500px]">
+            <div className="card bg-base-100 shadow-lg shadow-[#353535] hover:shadow-xl hover:shadow-[#353535] min-h-[500px]">
                 <figure className="px-5 pt-10 h-[250px]">
                     <img src={imageUrl ? imageUrl : ""} alt={name} className="rounded-xl" />
                 </figure>

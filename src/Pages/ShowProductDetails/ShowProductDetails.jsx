@@ -8,7 +8,7 @@ const ShowProductDetails = () => {
     const { name, brandName, typeOfProduct, imageUrl, price, rating, shortDescription } = data;
     const handleOrder = () => {
         const product = { name, brandName, typeOfProduct, imageUrl, price, rating, shortDescription }
-        fetch(' https://brand-shop-server-pakuuj9ls-taz-uddins-projects.vercel.app/order', {
+        fetch(' https://brand-shop-server-1ongval6u-taz-uddins-projects.vercel.app/order', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'

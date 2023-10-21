@@ -1,18 +1,23 @@
 
+import { useContext } from 'react';
 import best from '../../assets/img/logo/best.png'
 import service from '../../assets/img/logo/service.png'
 import value from '../../assets/img/logo/value.png'
+import { AuthContext } from '../../Provider/AuthProvider';
 
 const Commited = () => {
+    const{darkTheme}=useContext(AuthContext)
     return (
         <div className='max-w-7xl mx-auto'>
         <h1 className='text-4xl font-bold pb-2 text-center' >We are committed</h1>
         <div className='w-full mx-auto flex justify-center mt-2'>
-            <div className='h-[3px] w-[15%] bg-slate-800' mx-auto></div>
+        <div className={darkTheme ? "bg-[#ffffff] w-[15%] h-[3px] mx-auto mt-1" : 
+                "bg-[#353535] w-[15%] h-[3px] mx-auto mt-1"}>
+        </div>
         </div>
 
         {/* card area */}
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10 p-5 lg:p-0'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10 p-5 lg:p-0 text-[#1a1a1a]'>
             <div>
                 <div className="card bg-base-100 shadow-lg shadow-[#383838] hover:shadow-[#383838] text-center hover:shadow-xl">
                     <div className="card-body text-center">

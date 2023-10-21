@@ -25,7 +25,7 @@ const Router = createBrowserRouter([
             {
                 path: '/myCart',
                 element: <PrivateRouter><MyCart></MyCart></PrivateRouter>,
-                loader: () => fetch('https://brand-shop-server-pakuuj9ls-taz-uddins-projects.vercel.app/order')
+                loader: () => fetch('https://brand-shop-server-1ongval6u-taz-uddins-projects.vercel.app/order')
             },
             {
                 path: '/addProduct',
@@ -43,17 +43,17 @@ const Router = createBrowserRouter([
             {
                 path: '/showProduct/:brand',
                 element: <ShowProduct></ShowProduct>,
-                loader: ({ params }) => fetch(`https://brand-shop-server-pakuuj9ls-taz-uddins-projects.vercel.app/products1/${params.brand}`)
+                loader: ({ params }) => fetch(`https://brand-shop-server-1ongval6u-taz-uddins-projects.vercel.app/products1/${params.brand}`)
             },
             {
                 path: '/productDetails/:id',
                 element: <PrivateRouter><ShowProductDetails></ShowProductDetails></PrivateRouter>,
-                loader: ({ params }) => fetch(`https://brand-shop-server-pakuuj9ls-taz-uddins-projects.vercel.app/products/${params.id}`)
+                loader: ({ params }) => fetch(`https://brand-shop-server-1ongval6u-taz-uddins-projects.vercel.app/products/${params.id}`)
             },
             {
                 path: '/updateProduct/:id',
                 element: <PrivateRouter><UpdateProduct></UpdateProduct></PrivateRouter>,
-                loader: ({ params }) => fetch(`https://brand-shop-server-pakuuj9ls-taz-uddins-projects.vercel.app/products/${params.id}`)
+                loader: ({ params }) => fetch(`https://brand-shop-server-1ongval6u-taz-uddins-projects.vercel.app/products/${params.id}`)
             }
         ]
     }

@@ -3,10 +3,13 @@ import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 
+import { CiLight } from 'react-icons/ci';
+import { FaLightbulb } from 'react-icons/fa6';
+import { MdDarkMode, MdOutlineDarkMode, MdLightMode } from 'react-icons/md';
 
 const Navbar = () => {
     const logo = '/vite.svg'
-    const { user, handlesignOut } = useContext(AuthContext)
+    const { user, handlesignOut, setTheme } = useContext(AuthContext)
     const [open, setopen] = useState(false)
     const handleLogOut = () => {
         handlesignOut()
@@ -17,10 +20,16 @@ const Navbar = () => {
                 toast.error(err)
             })
     }
+    const [colors, setcolor] = useState(false)
+    setTheme(colors)
+    const handleTheme = () => {
+        setcolor(!colors)
+    }
     const navItem = <>
         <li><NavLink to={'/'}>Home</NavLink></li>
         <li><NavLink to={'/myCart'}>My Cart</NavLink></li>
         <li><NavLink to={'/addProduct'}>Add Product</NavLink></li>
+
         {
             user ?
                 <div className="pl-2">
@@ -58,12 +67,23 @@ const Navbar = () => {
 
                 </>
         }
+        <p onClick={handleTheme} className="bg-transparent hover:bg-transparent p-0 mt-[6px] -ml-32 lg:ml-5 ">
+            {!colors ?
+                <div className="flex justify-center items-center">
+                    <MdLightMode className="text-2xl text-black"></MdLightMode>
+                </div>
 
+                :
+                <div className="flex justify-center items-center">
+                    <CiLight className="text-2xl "></CiLight>
+                </div>
+            }
+        </p>
     </>
 
     return (
         <div>
-            <div className="bg-gradient-to-t from-[#383838] to-[#636262] text-white flex items-center justify-center">
+            <div className="bg-gradient-to-t from-[#383838] to-[#636262] text-white flex items-center justify-center ">
                 <div className="navbar mx-auto max-w-7xl">
                     <div className="navbar-start">
                         <div className="dropdown">
@@ -92,20 +112,22 @@ const Navbar = () => {
                     </div>
                 </div>
                 <div className="">
-                <div className="navbar-end lg:hidden flex justify-end w-full pr-10">
-                            <Link to={'/'} className="">
-                                <div className="flex justify-center items-center gap-2">
-                                    <img src={logo} alt="" />
-                                    <p className="font-semibold">
-                                        ThunderShop
-                                    </p>
-                                </div>
-                            </Link>
-                        </div>
+                    <div className="navbar-end lg:hidden flex justify-end w-full pr-10">
+                        <Link to={'/'} className="">
+                            <div className="flex justify-center items-center gap-2">
+                                <img src={logo} alt="" />
+                                <p className="font-semibold">
+                                    ThunderShop
+                                </p>
+                            </div>
+                        </Link>
+                    </div>
                 </div>
                 <ToastContainer></ToastContainer>
             </div>
         </div>
+
+        
     );
 };
 

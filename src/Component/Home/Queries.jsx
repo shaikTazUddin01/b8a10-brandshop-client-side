@@ -1,21 +1,26 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AuthContext } from '../../Provider/AuthProvider';
 
 const Queries = () => {
+    const { darkTheme } = useContext(AuthContext)
     return (
-        <div className='my-20 max-w-7xl mx-auto p-5 lg:p-0'>
+        <div className='mt-20 max-w-7xl mx-auto p-5 lg:p-0'>
             <div className='text-center'>
                 <p className='text-2xl font-bold'>Have any queries?</p>
                 <h1 className='text-4xl font-bold mt-2'>We're here to help.</h1>
                 <div className='w-full mx-auto flex justify-center mt-2'>
-                    <div className='h-[3px] md:w-[15%] w-[25%] bg-slate-800' mx-auto></div>
+                    {/* <div className='h-[3px] bg-[#353535]' mx-auto></div> */}
+
+                    <div className={darkTheme ? "bg-[#ffffff]  md:w-[15%] w-[25%] h-[3px] mx-auto mt-1" : 
+                "bg-[#353535]  md:w-[15%] w-[25%] h-[3px] mx-auto mt-1"}></div>
                 </div>
             </div>
             {/* card area */}
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-10'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 mt-10 pb-20 text-[#141414]'>
                 <div>
                     <div className="card bg-base-100 shadow-lg shadow-[#383838] hover:shadow-[#383838] text-center hover:shadow-xl">
                         <div className="card-body text-center">
-                            <h2 className="text-center text-3xl font-bold">Sales</h2>
+                            <h2 className="text-center text-3xl font-bold ">Sales</h2>
                             <div className='w-full mx-auto flex justify-center -mt-1 mb-2'>
                                 <div className='h-[3px] w-[25%] bg-slate-600' mx-auto></div>
                             </div>

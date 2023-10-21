@@ -3,7 +3,7 @@ import React, { createContext, useEffect, useState } from 'react';
 import auth from '../fireBase/fireBase.config';
 
 export const AuthContext = createContext(null)
-const GoogleProvider=new GoogleAuthProvider()
+const GoogleProvider = new GoogleAuthProvider()
 // const provider=new GithubAuthProvider()
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState();
@@ -22,10 +22,10 @@ const AuthProvider = ({ children }) => {
     //     setLoader(true)
     //     return signInWithPopup(auth,provider)
     // }
-const signInGoogle=()=>{
-    setLoader(true)
-    return signInWithPopup(auth,GoogleProvider)
-}
+    const signInGoogle = () => {
+        setLoader(true)
+        return signInWithPopup(auth, GoogleProvider)
+    }
 
     const handlesignOut = () => {
         return signOut(auth)
@@ -40,7 +40,13 @@ const signInGoogle=()=>{
         }
 
     }, [])
-    console.log(user);
+    // console.log(user);
+    const[darkTheme,setTheme]=useState()
+    // const handleDarkTheme=(color)=>{
+    //    setTheme(color);
+    // //    return darkTheme;
+    // }
+    // console.log(darkTheme)
     const AuthInFo = {
         handleRegister,
         handleLogin,
@@ -48,7 +54,10 @@ const signInGoogle=()=>{
         // signinGit,
         user,
         handlesignOut,
-        loader
+        loader,
+        // handleDarkTheme,
+        setTheme,
+        darkTheme
     }
     // console.log(user)
     return (

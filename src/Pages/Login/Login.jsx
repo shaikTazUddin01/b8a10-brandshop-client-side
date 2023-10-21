@@ -36,11 +36,11 @@ const Login = () => {
                 navigate(location?.state ? location.state : '/')
             }
         }).catch((err)=>{
-            toast.error("something is wrong please try again")
+            toast.error(err.message)
         })
     }
     return (
-        <div style={{ backgroundImage: `url(${bg})` }} className='bg-cover min-h-[80vh]'>
+        <div className='bg-cover min-h-[80vh]'  style={{ backgroundImage: `url(${bg})` }}>
             <div className='mx-auto bg-[#0505059d] min-h-[80vh]' >
                 <div className="py-10">
                     <div className="hero-content flex-col mx-auto">

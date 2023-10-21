@@ -7,12 +7,13 @@ import { Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectFade } from 's
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/effect-fade';
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const ShowProduct = () => {
     const brandItems = useLoaderData()
     // console.log(brandItems)
-
+    const { darkTheme } = useContext(AuthContext)
     const brand = useParams()
     const brandName = brand.brand;
 
@@ -48,7 +49,10 @@ const ShowProduct = () => {
     // console.log(a)
     // console.log(expectedAd)
     return (
-        <div className="min-h-[89vh]">
+        // <div className="min-h-[89vh]">
+        <div className={!darkTheme ? "bg-[#ffffff] min-h-[89vh] text-black " :
+            "bg-[#000000] min-h-[89vh] text-white "}>
+            {/* </div> */}
             <div>
                 <Swiper
                     // install Swiper modules
@@ -68,9 +72,11 @@ const ShowProduct = () => {
                 // onSlideChange={() => console.log('slide change')}
                 >
                     {
-                        ads?.map((ad, index) => (
-                            <SwiperSlide key={index} className='bg-gradient-to-b from-[#363636] to-[#000000] max-w-full min-h-[400px] flex items-center justify-center p-10'>
-                                <div className="flex flex-col md:flex-row justify-between items-center h-[600px] md:h-auto">
+                       ads.length && ads?.map((ad, index) => (
+                            <SwiperSlide key={index} className='bg-gradient-to-b from-[#363636] to-[#000000] max-w-full
+                             min-h-[400px] flex items-center justify-center shadow-2xl shadow-white  p-10 '>
+                                <div className="flex flex-col md:flex-row justify-between items-center h-[600px]
+                                 md:h-auto ">
                                     <div className="w-full md:w-1/2 px-5 text-center">
                                         <h1 className="text-white  text-2xl font-semibold mb-2">{ad.title}</h1>
                                         {/* <button className="bg-[#454546] text-white px-3 py-2 rounded-md mt-2 border">Buy Now</button> */}
@@ -89,8 +95,8 @@ const ShowProduct = () => {
 
 
             {
-                brandItems.length > 0 ?
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-20 max-w-6xl mx-auto px-5 lg:px-0">
+             brandItems?.length > 0 ?
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-20 pb-20 max-w-6xl mx-auto px-5 lg:px-0">
                         {
                             brandItems?.map(item => <ProductCard key={item._id} item={item}></ProductCard>)
                         }

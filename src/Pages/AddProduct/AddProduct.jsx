@@ -17,7 +17,7 @@ const AddProduct = () => {
         const shortDescription = form.shortDescription.value;
 
         const product = { name, brandName, typeOfProduct, imageUrl, price, rating, shortDescription }
-        fetch(' https://brand-shop-server-pakuuj9ls-taz-uddins-projects.vercel.app/products', {
+        fetch(' https://brand-shop-server-1ongval6u-taz-uddins-projects.vercel.app/products', {
             method: "POST",
             headers: {
                 "content-type": "application/json"
