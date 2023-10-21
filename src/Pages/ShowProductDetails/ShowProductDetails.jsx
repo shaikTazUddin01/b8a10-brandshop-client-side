@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import Rating from 'react-rating';
 import { Link, useLoaderData } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
+import { AuthContext } from '../../Provider/AuthProvider';
 
 const ShowProductDetails = () => {
+ 
     const data = useLoaderData()
     const { name, brandName, typeOfProduct, imageUrl, price, rating, shortDescription } = data;
     const handleOrder = () => {
@@ -24,7 +26,8 @@ const ShowProductDetails = () => {
     }
 
     return (
-        <div className='md:my-20 max-w-6xl mx-auto'>
+       
+            <div className='md:my-20 max-w-6xl mx-auto'>
             <div className="card bg-base-100 shadow-xl">
                 <figure className='border shadow-lg'><img src={imageUrl ? imageUrl : ""} alt={name} className='max-h-[500px]' /></figure>
                 <div className="card-body md:px-20">
@@ -90,6 +93,7 @@ const ShowProductDetails = () => {
                 </div>
             </div>
         </div>
+    
     );
 };
 
